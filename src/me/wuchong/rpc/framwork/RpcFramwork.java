@@ -19,7 +19,6 @@ public class RpcFramwork {
 	 *            服务实现
 	 * @param port
 	 *            服务端口
-	 * @throws Exception
 	 */
 	public static void export(final Object service, int port) {
 		if (service == null)
@@ -78,7 +77,7 @@ public class RpcFramwork {
 	}
 
 	/**
-	 * 引用服务
+	 * 调用服务
 	 * 
 	 * @param <T>
 	 *            接口泛型
@@ -89,7 +88,6 @@ public class RpcFramwork {
 	 * @param port
 	 *            服务器端口
 	 * @return 远程服务
-	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T refer(final Class<T> interfaceClass, final String host,
